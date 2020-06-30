@@ -51,7 +51,7 @@ export default {
         async sb_load_all_skeletons({ commit }) {
             try {
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/skeleton/get_all.php"
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeleton/get_all.php"
                 );
                 let all_skeletons_data = response.data
 
@@ -73,7 +73,7 @@ export default {
                 form_data.append("id", parseInt(id));
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/skeleton/get_by_id.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeleton/get_by_id.php",
                     form_data
                 );
                 let skeleton_by_id_data = response.data
@@ -98,7 +98,7 @@ export default {
                 form_data.append("image_back", payload.image_back);
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/skeleton/create.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeleton/create.php",
                     form_data, {
                         headers: {
                             "Content-Type": "multipart/form-data"
@@ -124,7 +124,7 @@ export default {
                 form_data.append("id", parseInt(id));
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/skeleton/delete.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeleton/delete.php",
                     form_data
                 )
 
@@ -148,7 +148,7 @@ export default {
                 form_data.append("weight", parseInt(payload.weight));
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/skeleton/update.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeleton/update.php",
                     form_data
                 )
 

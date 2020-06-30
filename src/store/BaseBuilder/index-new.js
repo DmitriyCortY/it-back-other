@@ -65,7 +65,7 @@ export default {
         async bb_load_all_bases({ commit }) {
             try {
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/base/get_all.php"
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/base/get_all.php"
                 )
                 let resp_data = response.data
 
@@ -84,7 +84,7 @@ export default {
                 let form_data = new FormData()
                 form_data.append('id', parseInt(id))
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/base/get_by_id.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/base/get_by_id.php",
                     form_data
                 )
                 let resp_data = response.data
@@ -107,7 +107,7 @@ export default {
                 form_data.append('description', payload.description)
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/base/create.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/base/create.php",
                     form_data
                 )
                 let resp_data = response.data
@@ -131,7 +131,7 @@ export default {
                 form_data.append('id', parseInt(payload.id))
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/base/update.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/base/update.php",
                     form_data
                 )
                 let resp_data = response.data
@@ -152,7 +152,7 @@ export default {
                 let form_data = new FormData()
                 form_data.append('id', parseInt(payload))
                 let response = await Axios.post(
-                    'http://ivan-tactical.conf/base/delete.php',
+                    'https://tactical.tot/wp-content/themes/totonis/constructor/conf/base/delete.php',
                     form_data
                 )
                 let resp_data = response.data
@@ -188,7 +188,7 @@ export default {
                 let form_data_skeleton = new FormData()
                 form_data_skeleton.append('id', parseInt(payload))
                 let response_skeleton_by_id = await Axios.post(
-                    "http://ivan-tactical.conf/skeleton/get_by_id.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeleton/get_by_id.php",
                     form_data_skeleton
                 )
                 
@@ -198,14 +198,14 @@ export default {
                 let form_data_skeleton_points = new FormData()
                 form_data_skeleton_points.append('id', parseInt(payload))
                 let response_skeleton_points_by_id = await Axios.post(
-                    "http://ivan-tactical.conf/skeletons_points/get.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeletons_points/get.php",
                     form_data_skeleton_points
                 )
                 data_list.skeletons_points = response_skeleton_points_by_id.data.data
 
                 // получаем данные всех партов (обвесы второго типа)
                 let response_all_parts = await Axios.post(
-                    "http://ivan-tactical.conf/part/get_all.php"
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/part/get_all.php"
                 );
                 data_list.all_parts_data = response_all_parts.data.data
 
@@ -219,7 +219,7 @@ export default {
                 let list_parts_points_form_data = new FormData()
                 list_parts_points_form_data.append('ids', JSON.stringify(lsit_parts_id))
                 let list_parts_points = await Axios.post(
-                    'http://ivan-tactical.conf/parts_points/get_by_list_ids.php',
+                    'https://tactical.tot/wp-content/themes/totonis/constructor/conf/parts_points/get_by_list_ids.php',
                     list_parts_points_form_data
                 )
                 data_list.list_parts_points = list_parts_points.data.data
@@ -241,7 +241,7 @@ export default {
 
 
                 // получаем список классов
-                const classes_list = await Axios.post("http://ivan-tactical.conf/classes/get_all.php")
+                const classes_list = await Axios.post("https://tactical.tot/wp-content/themes/totonis/constructor/conf/classes/get_all.php")
                 const resp_classes_list = classes_list.data.data
                 data_list.classes_list = resp_classes_list
 
@@ -311,7 +311,7 @@ export default {
                 let form_data = new FormData()
                 form_data.append('attachments', JSON.stringify(payload))
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/base/attach.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/base/attach.php",
                     form_data
                 )
                 let resp_data = response.data
@@ -334,7 +334,7 @@ export default {
                 let form_data = new FormData()
                 form_data.append('id', parseInt(payload))
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/base/attach_get.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/base/attach_get.php",
                     form_data
                 )
                 let resp_data = response.data

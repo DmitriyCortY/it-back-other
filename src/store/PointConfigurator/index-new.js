@@ -46,7 +46,7 @@ export default {
                 form_data.append('id', parseInt(payload.id))
                 if (payload.related === 'skeleton') {
                     let response = await Axios.post(
-                        "http://ivan-tactical.conf/skeletons_points/get.php",
+                        "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeletons_points/get.php",
                         form_data
                     )
 
@@ -63,7 +63,7 @@ export default {
                     commit('pc_load_points_by_id_and_related', list)
                 } else if (payload.related === 'part') {
                     let response = await Axios.post(
-                        "http://ivan-tactical.conf/parts_points/get.php",
+                        "https://tactical.tot/wp-content/themes/totonis/constructor/conf/parts_points/get.php",
                         form_data
                     )
 
@@ -80,7 +80,7 @@ export default {
                     commit('pc_load_points_by_id_and_related', list)
                 } else if (payload.related === 'product') {
                     let response = await Axios.post(
-                        "http://ivan-tactical.conf/products_points/get.php",
+                        "https://tactical.tot/wp-content/themes/totonis/constructor/conf/products_points/get.php",
                         form_data
                     )
 
@@ -124,7 +124,7 @@ export default {
                 if (payload.related === 'skeleton') {
                     form_data.append('skeleton_id', parseInt(payload.data.skeletonId))
                     let response = await Axios.post(
-                        "http://ivan-tactical.conf/skeletons_points/create.php",
+                        "https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeletons_points/create.php",
                         form_data
                     )
                     let resp_data = response.data
@@ -137,7 +137,7 @@ export default {
                 } else if (payload.related === 'part') {
                     form_data.append('part_id', parseInt(payload.data.partId))
                     let response = await Axios.post(
-                        "http://ivan-tactical.conf/parts_points/create.php",
+                        "https://tactical.tot/wp-content/themes/totonis/constructor/conf/parts_points/create.php",
                         form_data
                     )
                     let resp_data = response.data
@@ -150,7 +150,7 @@ export default {
                 } else if (payload.related === 'product') {
                     form_data.append('product_id', parseInt(payload.data.productId))
                     let response = await Axios.post(
-                        "http://ivan-tactical.conf/products_points/create.php",
+                        "https://tactical.tot/wp-content/themes/totonis/constructor/conf/products_points/create.php",
                         form_data
                     )
                     let resp_data = response.data
@@ -174,7 +174,7 @@ export default {
 
                 if (payload.related === 'skeleton') {
                     let response = await Axios.post(
-                        'http://ivan-tactical.conf/skeletons_points/delete.php',
+                        'https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeletons_points/delete.php',
                         form_data
                     )
                     let resp_data = response.data
@@ -187,7 +187,7 @@ export default {
                     commit('pc_delete_point', parseInt(payload.id))
                 } else if (payload.related === 'part') {
                     let response = await Axios.post(
-                        'http://ivan-tactical.conf/parts_points/delete.php',
+                        'https://tactical.tot/wp-content/themes/totonis/constructor/conf/parts_points/delete.php',
                         form_data
                     )
                     let resp_data = response.data
@@ -200,7 +200,7 @@ export default {
                     commit('pc_delete_point', parseInt(payload.id))
                 } else if (payload.related === 'product') {
                     let response = await Axios.post(
-                        'http://ivan-tactical.conf/products_points/delete.php',
+                        'https://tactical.tot/wp-content/themes/totonis/constructor/conf/products_points/delete.php',
                         form_data
                     )
                     let resp_data = response.data
@@ -235,7 +235,7 @@ export default {
                 if (payload.related === 'skeleton') {
                     form_data.append('skeleton_id', parseInt(payload.data.skeletonId))
                     let response = await Axios.post(
-                        'http://ivan-tactical.conf/skeletons_points/update.php',
+                        'https://tactical.tot/wp-content/themes/totonis/constructor/conf/skeletons_points/update.php',
                         form_data
                     )
                     let resp_data = response.data
@@ -248,7 +248,7 @@ export default {
                 } else if (payload.related === 'part') {
                     form_data.append('part_id', parseInt(payload.data.partId))
                     let response = await Axios.post(
-                        'http://ivan-tactical.conf/parts_points/update.php',
+                        'https://tactical.tot/wp-content/themes/totonis/constructor/conf/parts_points/update.php',
                         form_data
                     )
                     let resp_data = response.data
@@ -262,7 +262,7 @@ export default {
                 } else if (payload.related === 'product') {
                     form_data.append('product_id', parseInt(payload.data.productId))
                     let response = await Axios.post(
-                        'http://ivan-tactical.conf/products_points/update.php',
+                        'https://tactical.tot/wp-content/themes/totonis/constructor/conf/products_points/update.php',
                         form_data
                     )
                     let resp_data = response.data

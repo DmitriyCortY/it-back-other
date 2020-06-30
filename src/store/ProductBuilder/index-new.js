@@ -51,7 +51,7 @@ export default {
         async prb_load_all_products({ commit }) {
             try {
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/product/get_all.php"
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/product/get_all.php"
                 );
                 let all_products_data = response.data
 
@@ -73,7 +73,7 @@ export default {
                 form_data.append("id", parseInt(id));
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/product/get_by_id.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/product/get_by_id.php",
                     form_data
                 );
                 let product_by_id_data = response.data
@@ -98,7 +98,7 @@ export default {
                 form_data.append("image_back", payload.image_back);
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/product/create.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/product/create.php",
                     form_data, {
                         headers: {
                             "Content-Type": "multipart/form-data"
@@ -124,7 +124,7 @@ export default {
                 form_data.append("id", parseInt(id));
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/product/delete.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/product/delete.php",
                     form_data
                 )
 
@@ -148,7 +148,7 @@ export default {
                 form_data.append("weight", parseInt(payload.weight));
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/product/update.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/product/update.php",
                     form_data
                 )
 

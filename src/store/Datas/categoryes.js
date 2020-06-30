@@ -12,7 +12,7 @@ export default {
     actions: {
         async load_all_categoryes({ commit }) {
             try {
-                const response = await Axios.post("http://ivan-tactical.conf/categoryes/get.php")
+                const response = await Axios.post("https://tactical.tot/wp-content/themes/totonis/constructor/conf/categoryes/get.php")
                 const resp_data = response.data
                 Vue.notify({
                     group: 'foo',

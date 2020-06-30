@@ -51,7 +51,7 @@ export default {
         async pb_load_all_parts({ commit }) {
             try {
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/part/get_all.php"
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/part/get_all.php"
                 );
                 let all_parts_data = response.data
 
@@ -73,7 +73,7 @@ export default {
                 form_data.append("id", parseInt(id));
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/part/get_by_id.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/part/get_by_id.php",
                     form_data
                 );
                 let part_by_id_data = response.data
@@ -97,7 +97,7 @@ export default {
                 form_data.append("image_back", payload.image_back);
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/part/create.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/part/create.php",
                     form_data, {
                         headers: {
                             "Content-Type": "multipart/form-data"
@@ -123,7 +123,7 @@ export default {
                 form_data.append("id", parseInt(id));
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/part/delete.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/part/delete.php",
                     form_data
                 )
 
@@ -146,7 +146,7 @@ export default {
                 form_data.append("name", payload.name);
 
                 let response = await Axios.post(
-                    "http://ivan-tactical.conf/part/update.php",
+                    "https://tactical.tot/wp-content/themes/totonis/constructor/conf/part/update.php",
                     form_data
                 )
 
