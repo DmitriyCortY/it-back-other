@@ -51,6 +51,13 @@ export default {
                 this.get_part_data()
             },
             deep: true
+        },
+        side: {
+            immediate: true,
+            handler(){
+                this.get_part_data()
+            },
+            deep: true
         }
     },
     data(){
@@ -74,7 +81,9 @@ export default {
            this.get_part_data()
             
             if(this.attachments['front'].length > 0 || this.attachments['back'].length > 0){
-                clearInterval(interval)
+                setTimeout(() => {
+                    clearInterval(interval)
+                }, 1000)
             }
         },100)
     },

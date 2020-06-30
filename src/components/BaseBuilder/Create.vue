@@ -780,9 +780,10 @@ export default {
     },
     merge_classes(){
       let list = false
-      if(this.bb_base_relations.list_data_of_used_classes_for_skeleton && this.bb_base_relations.list_data_of_used_classes_for_part){
+      if(this.bb_base_relations.list_data_of_used_classes_for_skeleton && this.bb_base_relations.list_data_of_used_classes_for_part && this.bb_base_relations.list_data_of_used_classes_for_skeleton.length > 0){
         list = Array.from(new Set(this.bb_base_relations.list_data_of_used_classes_for_skeleton.concat(this.bb_base_relations.list_data_of_used_classes_for_part)))
       }
+      
       return list
     },
     bb_base_by_id(){

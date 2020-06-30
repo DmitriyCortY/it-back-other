@@ -94,7 +94,7 @@ export default {
                 })
                 commit('akb_load_kit_by_id', resp_data.data)
             } catch (error) {
-                console.log(error)
+                console.error(error)
             }
         },
         async akb_delete_kit_by_id({ commit }, payload) { // payload (int) [kit_id]
@@ -265,7 +265,6 @@ export default {
                 data.merge_classes_skeleton_and_products = Array.from(new Set(data.skeleton_points_classes_list.concat(data.products_points_classes_list)))
 
 
-                console.log(payload, data)
                 commit('akb_load_kit_relation', data)
                 commit('akb_load_kit_relation_all_loaded')
             } catch (error) {

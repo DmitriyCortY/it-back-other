@@ -21,7 +21,7 @@ export default {
                 })
                 commit('load_all_categoryes', resp_data.data)
             } catch (error) {
-                console.log(error)
+                console.error(error)
             }
         }
     },

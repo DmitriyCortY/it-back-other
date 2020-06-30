@@ -13,5 +13,6 @@ export default class Point {
         this.skeletonId = data.skeleton_id ? parseInt(data.skeleton_id) : undefined
         this.partId = data.part_id ? parseInt(data.part_id) : undefined
         this.productId = data.product_id ? parseInt(data.product_id) : undefined
+        this.relatedPoint = data.related_id ? parseInt(data.related_id) : undefined
     }
 }

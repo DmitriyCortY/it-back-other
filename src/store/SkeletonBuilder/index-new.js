@@ -133,8 +133,9 @@ export default {
                     text: response.data.message,
                     type: response.data.status
                 })
-
-                commit('sb_delete_skeleton', { data: response.data, id: parseInt(id) })
+                if (response.data.status === 'success') {
+                    commit('sb_delete_skeleton', { data: response.data, id: parseInt(id) })
+                }
             } catch (error) {
                 console.error(error)
             }

@@ -191,7 +191,7 @@ export default {
                     "http://ivan-tactical.conf/skeleton/get_by_id.php",
                     form_data_skeleton
                 )
-                
+
                 data_list.skeleton_data = response_skeleton_by_id.data.data[0]
 
                 // получаем точки выбраного скелетона
@@ -299,7 +299,6 @@ export default {
                 }
                 data_list.list_data_of_used_classes_for_part = list_data_of_used_classes_for_part
 
-                console.log(data_list)
                 commit('bb_load_base_relations', data_list)
                 commit('bb_load_base_relations_status', true)
             } catch (error) {
